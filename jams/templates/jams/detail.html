@@ -1,3 +1,6 @@
 {% extends "base_generic.html" %}
+{% block content %}
   This happening jam:
-  {{ jam }}
+  <p>{{ jam.id }}</p>
+  <p>{{ jam.open_tok_session_id }}</p>
+{% endblock %}

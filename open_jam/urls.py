@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import include, path
 from django.contrib.auth import views as auth_views
 from . import views as main_views
+from jams import views as jam_views
 
 urlpatterns = [
     path('', main_views.index),

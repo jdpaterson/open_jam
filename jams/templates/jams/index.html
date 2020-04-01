@@ -1,6 +1,7 @@
 {% extends "base_generic.html" %}
-
 {% block content %}
-  <p>Logged out!</p>
-  <a href="{% url 'login'%}">Click here to login again.</a>
+  <p>Happening Jams</p>
+  {% for jam in jams %}
+    <a href={% url 'detail' jam_id=jam.id %}>{{ jam.name }}</p>
+  {% endfor %}
 {% endblock %}

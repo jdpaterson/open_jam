@@ -1,9 +1,9 @@
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
-from django.shortcuts import get_object_or_404, render
+from django.shortcuts import get_object_or_404, render, redirect
 
 def index(request):
-  return render(request, 'home.html', {})
+  return redirect('/jams/')
 
 def register(request):
   if request.method == 'POST':
