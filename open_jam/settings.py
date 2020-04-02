@@ -25,12 +25,13 @@ SECRET_KEY = 'c(+)l-1qwv@islun88(vm5^x$ilakf*^+^+m*3!y3qlt6%c^pf'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['open-jam.herokuapp.com']
+ALLOWED_HOSTS = ['localhost', 'open-jam.herokuapp.com']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'whitenoise.runserver_nostatic',
     'jams.apps.JamsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -41,8 +42,8 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -123,15 +124,15 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-STATIC_URL = '/static/'
 LOGIN_REDIRECT_URL = '/jams/'
 
 # From heroku instructions: https://www.codementor.io/@jamesezechukwu/how-to-deploy-django-app-on-heroku-dtsee04d4
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
-PROJECT_ROOT   =   os.path.join(os.path.abspath(__file__))
-STATIC_ROOT  =   os.path.join(PROJECT_ROOT, 'staticfiles')
-STATIC_URL = '/static/'
+
+PROJECT_ROOT    = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+STATIC_ROOT     = os.path.join(PROJECT_ROOT, 'staticfiles')
+STATIC_URL      = '/static/'
 
 # Extra lookup directories for collectstatic to find static files
 STATICFILES_DIRS = (
@@ -139,7 +140,7 @@ STATICFILES_DIRS = (
 )
 
 #  Add configuration for static files storage using whitenoise
-STATICFILES_STORAGE = 'whitenoise.django.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 import dj_database_url
 prod_db  =  dj_database_url.config(conn_max_age=500)
