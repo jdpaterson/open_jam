@@ -25,7 +25,7 @@ SECRET_KEY = 'c(+)l-1qwv@islun88(vm5^x$ilakf*^+^+m*3!y3qlt6%c^pf'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['open-jam.herokuapp.com']
 
 
 # Application definition
