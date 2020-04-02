@@ -4,7 +4,12 @@
   <p>JAM ID: {{ jam.id }}</p>
   <p>JAM SESSION ID: {{ jam.open_tok_session_id }}</p>
   <p>TOKEN: {{ opentok_token }}</p>
-  <button onClick="initializeSession()" value="Start Session">HERE</button>
+  <button onClick="connect()">Connect</button>
+  <button onClick="disconnect()">Disconnect</button>
+  <button onClick="printCapabilities()">Print Capabilities</button>
+  <button onClick="initPublisher()">Init Publisher</button>
+  <button onClick="publish()">Publish</button>
+  <button onClick="subscribeToStream()">Subscribe</button>
   <script>
     apiKey = "{{ api_key }}";
     sessionId = "{{ session_id }}";
