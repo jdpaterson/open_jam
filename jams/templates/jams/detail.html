@@ -1,6 +1,13 @@
 {% extends "base_generic.html" %}
 {% block content %}
   This happening jam:
-  <p>{{ jam.id }}</p>
-  <p>{{ jam.open_tok_session_id }}</p>
+  <p>JAM ID: {{ jam.id }}</p>
+  <p>JAM SESSION ID: {{ jam.open_tok_session_id }}</p>
+  <p>TOKEN: {{ opentok_token }}</p>
+  <button onClick="initializeSession()" value="Start Session">HERE</button>
+  <script>
+    apiKey = "{{ api_key }}";
+    sessionId = "{{ session_id }}";
+    token = "{{ opentok_token }}";
+  </script>
 {% endblock %}

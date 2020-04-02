@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  {% block title %}<title>Local Library</title>{% endblock %}
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'jams/style.css' %}">
+  <script src="https://static.opentok.com/v2/js/opentok.min.js"></script>
+  <script type="text/javascript" src="{% static 'jams/open_tok.js' %}"></script>
+  {% block title %}<title>Open Jam</title>{% endblock %}
 </head>
 <body>
   {% block sidebar %}
