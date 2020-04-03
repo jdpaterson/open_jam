@@ -11,10 +11,18 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import environ
+
+root = environ.Path(__file__) - 3
+env = environ.Env()
+environ.Env.read_env()
+
+SITE_ROOT = root()
+OPENTOK_API_KEY = env.str('OPENTOK_API_KEY')
+OPENTOK_SECRET  = env.str('OPENTOK_SECRET')
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
