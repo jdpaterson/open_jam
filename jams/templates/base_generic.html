@@ -8,15 +8,37 @@
   {% block title %}<title>Open Jam</title>{% endblock %}
 </head>
 <body>
-  {% block sidebar %}
-    <a href="{% url 'index' %}" ><h1>Home</h1></a>
-    {% if user.is_authenticated %}
-      <li>Hey {{ user.get_username }}</li>
-      <li><a href="{% url 'logout'%}?next={{request.path}}">Logout</a></li>
-    {% else %}
-      <li><a href="{% url 'login'%}?next={{request.path}}">Login</a></li>
-      <li><a href="/register" >Register</a></li>
-    {% endif %}
+  {% block navbar %}
+    <nav class="nav-menu">
+      <div class="title" >
+        <h1>
+          <a href="{% url 'index' %}" >OpenJam</a>
+        </h1>
+      </div>
+      <div class="session" >
+        {% if user.is_authenticated %}
+          <div class="session-item">
+            <p>Hey {{ user.get_username }}</p>
+          </div>
+          <div class="session-item">
+            <a href="{% url 'logout'%}?next={{request.path}}">
+              <button class="session-item__button-link">Logout</button>
+            </a>
+          </div>
+        {% else %}
+          <div class="session-item">
+            <a href="{% url 'login'%}?next={{request.path}}">
+              <button class="session-item__button-link">Login</button>
+            </a>
+          </div>
+          <div class="session-item">
+            <a href="/register" >
+              <button class="session-item__button-link">Register</button>
+            </a>
+          </div>
+        {% endif %}
+      </div>
+    </nav>
   {% endblock %}
   {% block content %}<!-- default content text (typically empty) -->{% endblock %}
 </body>

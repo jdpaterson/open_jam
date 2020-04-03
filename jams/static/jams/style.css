@@ -1,16 +1,95 @@
-body, html {
-  background-color: gray;
-  height: 100%;
+:root {
+  --seafoam: #B8E5CE;
+  --olive: #7C8A81;
+  --charcoal: #2B363B;
+  --peach: #FCE5AA;
+  --gold: #C7A149;
 }
 
-#videos {
-  position: relative;
+body, html {
+  background-color: var(--charcoal);
+  color: var(--seafoam);
+  height: 100%;
+  font-family: verdana;
+}
+
+a {
+  color: var(--olive);
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
+}
+
+button {
+  background-color: var(--peach);
+  border: 1px solid var(--charcoal);
+  border-radius: 5px;
+  font-weight: bold;
+  height: 25px;
+  margin: 5px;
+}
+
+button:active {
+  background-color: var(--charcoal);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+}
+
+form input {
+  border-radius: 5px;
+  height: 25px;
+  margin: 5px;
+  width: 250px;
+}
+
+form input[type=submit] {
+  border: solid 1px var(--olive);
+  background-color: var(--peach);
+  color: var(--charcoal);
+  font-weight: bold;
+  margin: 15px;
+  width: 100px;
+}
+
+nav {
+  margin: 5px 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+nav .title {
+  flex-grow: 1;
+}
+
+nav .session {
+  margin: 10px;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: space-around; */
+}
+
+nav .session-item {
+  text-align: center;
+}
+
+nav .session-item__button-link {
   width: 100%;
   height: 100%;
-  margin-left: auto;
-  margin-right: auto;
 }
 
+/* Utility Classes */
+
+.justify--between{
+  justify-content: space-between;
+}
+
+/* OpenTok Styles */
 #subscriber {
   position: absolute;
   left: 0;
@@ -29,4 +108,12 @@ body, html {
   z-index: 100;
   border: 3px solid white;
   border-radius: 3px;
+}
+
+#videos {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
