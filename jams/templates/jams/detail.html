@@ -10,9 +10,24 @@
   <button onClick="initPublisher()">Init Publisher</button>
   <button onClick="publish()">Publish</button>
   <button onClick="subscribeToStream()">Subscribe</button>
+  <button onClick="printJam()">Print Jam</button>
+  <button onClick="printCurrentUser()">Print User</button>
   <script>
     apiKey = "{{ api_key }}";
     sessionId = "{{ session_id }}";
     token = "{{ opentok_token }}";
+    jam = {{ jam|safe }}[0];
+    currentUser = {{ current_user|safe }}[0];
+    // permission = "{{ permissions }}";
   </script>
+  {% if permissions.can_moderate == True %}
+    <script>
+        console.log("can moderate")
+    </script>
+  {% endif %}
+  {% if permissions.can_publish  %}
+    <script>
+        console.log("can publish");
+    </script>
+  {% endif %}
 {% endblock %}

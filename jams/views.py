@@ -1,3 +1,5 @@
+import os
+from django.core import serializers
 from django.shortcuts import get_object_or_404, render
 from .models import Jam
 from opentok import OpenTok
@@ -10,14 +12,21 @@ def index(request):
   return render(request, 'jams/index.html', context)
 
 def detail(request, jam_id):
-  api_key = '46593382'
-  opentok = OpenTok(api_key, '78c15c4ccb015d203e6412f12f5fbb9436b4cd16')
-  jam = get_object_or_404(Jam, pk=jam_id)
+  api_key = os.getenv("OPENTOK_API_KEY")
+  opentok = OpenTok(api_key, os.getenv("OPENTOK_SECRET"))
+  jam = Jam.objects.filter(pk=jam_id).first()
   opentok_token = opentok.generate_token(jam.open_tok_session_id)
+  can_moderate = jam.coordinator.id == request.user.id
+  can_publish = jam.jamrequest_set.filter(publisher_id=request.user.id).exists()
   context = {
-    'jam': jam,
+    'jam': serializers.serialize('json', [jam]),
     'api_key': api_key,
     'session_id': jam.open_tok_session_id,
-    'opentok_token': opentok_token
+    'opentok_token': opentok_token,
+    'permissions': {
+      'can_moderate': can_moderate,
+      'can_publish': can_publish
+    },
+    'current_user': serializers.serialize('json', [request.user])
   }
   return render(request, 'jams/detail.html', context)
