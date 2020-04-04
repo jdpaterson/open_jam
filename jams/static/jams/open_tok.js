@@ -5,6 +5,12 @@ function handleError(error) {
     alert(error.message);
   }
 }
+function printJam(){
+  console.log(jam);
+}
+function printCurrentUser(){
+  console.log(currentUser);
+}
 function connect(){
   session = OT.initSession(apiKey, sessionId);
   session.on({
@@ -55,14 +61,20 @@ function subscribeToStream(){
 
 var publisher;
 function initPublisher(){
-  publisher = OT.initPublisher('publisher', null, function(error) {
-    if (error) {
-      // The client cannot publish.
-      // You may want to notify the user.
-    } else {
-      console.log('Publisher initialized.');
+  publisher = OT.initPublisher(
+    'publisher',
+    {
+      name: currentUser.fields.username
+    },
+    function(error) {
+      if (error) {
+        // The client cannot publish.
+        // You may want to notify the user.
+      } else {
+        console.log('Publisher initialized.');
+      }
     }
-  });
+  );
 }
 
 function publish(){

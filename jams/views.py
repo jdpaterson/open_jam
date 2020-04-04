@@ -18,6 +18,8 @@ def detail(request, jam_id):
   opentok_token = opentok.generate_token(jam.open_tok_session_id)
   can_moderate = jam.coordinator.id == request.user.id
   can_publish = jam.jamrequest_set.filter(publisher_id=request.user.id).exists()
+  print("\n\n %s \n\n" % request.user.id)
+  current_user = "{}" if request.user.id == None else serializers.serialize('json', [request.user])
   context = {
     'jam': serializers.serialize('json', [jam]),
     'api_key': api_key,
@@ -27,6 +29,6 @@ def detail(request, jam_id):
       'can_moderate': can_moderate,
       'can_publish': can_publish
     },
-    'current_user': serializers.serialize('json', [request.user])
+    'current_user': current_user
   }
   return render(request, 'jams/detail.html', context)
