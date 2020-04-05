@@ -39,6 +39,7 @@ ALLOWED_HOSTS = ['localhost', 'open-jam.herokuapp.com']
 # Application definition
 
 INSTALLED_APPS = [
+    'webpack_loader',
     'whitenoise.runserver_nostatic',
     'jams.apps.JamsConfig',
     'django.contrib.admin',
@@ -147,9 +148,21 @@ STATICFILES_DIRS = (
     os.path.join(PROJECT_ROOT, 'static'),
 )
 
-#  Add configuration for static files storage using whitenoise
+#  Add configuration for static files storage using wnhitenoise
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 import dj_database_url
 prod_db  =  dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(prod_db)
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'assets'),
+)
+
+
+WEBPACK_LOADER = {
+    'DEFAULT': {
+        'BUNDLE_DIR_NAME': 'bundles/',
+        'STATS_FILE': os.path.join(BASE_DIR, 'webpack-stats.json'),
+    }
+}

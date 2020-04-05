@@ -1,5 +1,10 @@
 {% extends "base_generic.html" %}
+{% load render_bundle from webpack_loader %}
 {% block content %}
+<div id="app">
+  <demo></demo>
+</div>
+{% render_bundle 'main' %}
   This happening jam:
   <p>TOKEN: {{ opentok_token }}</p>
   <button onClick="connect()">Connect</button>
