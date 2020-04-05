@@ -1,8 +1,6 @@
 {% extends "base_generic.html" %}
 {% block content %}
   This happening jam:
-  <p>JAM ID: {{ jam.id }}</p>
-  <p>JAM SESSION ID: {{ jam.open_tok_session_id }}</p>
   <p>TOKEN: {{ opentok_token }}</p>
   <button onClick="connect()">Connect</button>
   <button onClick="disconnect()">Disconnect</button>
@@ -13,21 +11,10 @@
   <button onClick="printJam()">Print Jam</button>
   <button onClick="printCurrentUser()">Print User</button>
   <script>
-    apiKey = "{{ api_key }}";
-    sessionId = "{{ session_id }}";
-    token = "{{ opentok_token }}";
     jam = {{ jam|safe }}[0];
     currentUser = {{ current_user|safe }}[0];
-    // permission = "{{ permissions }}";
+    sessionId = jam.opentok_session_id;
+    apiKey = "{{ api_key }}";
+    token = "{{ opentok_token }}";
   </script>
-  {% if permissions.can_moderate == True %}
-    <script>
-        console.log("can moderate")
-    </script>
-  {% endif %}
-  {% if permissions.can_publish  %}
-    <script>
-        console.log("can publish");
-    </script>
-  {% endif %}
 {% endblock %}

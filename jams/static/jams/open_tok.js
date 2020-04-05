@@ -1,5 +1,8 @@
 var session;
 var connectionCount = 0;
+const moderators = [];
+const publishers = [];
+const subscribers = [];
 function handleError(error) {
   if (error) {
     alert(error.message);
@@ -64,7 +67,10 @@ function initPublisher(){
   publisher = OT.initPublisher(
     'publisher',
     {
-      name: currentUser.fields.username
+      name: currentUser.fields.username,
+      style: {
+        buttonDisplayMode: 'off'
+      }
     },
     function(error) {
       if (error) {
