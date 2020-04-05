@@ -14,7 +14,7 @@ class Jam(models.Model):
                           default=OpentokService.gen_opentok_session_id()
                         )
   def user_opentok_permission(self, user_id):
-    if(self.coordinator.id == user_id):
+    if(self.moderator.id == user_id):
       return Roles.moderator
     elif(self.jamrequest_set.filter(publisher_id=user_id).exists()):
       return Roles.publisher
