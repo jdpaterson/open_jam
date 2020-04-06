@@ -4,23 +4,11 @@
 <script>
   jam = {{ jam|safe }}[0];
   currentUser = {{ current_user|safe }}[0];
-  opentokSessionId = jam.opentok_session_id;
-  opentokApiKey = "{{ api_key }}";
   opentokToken = "{{ opentok_token }}";
+  opentokSession = OT.initSession("{{ api_key }}", jam.opentok_session_id);
 </script>
 <div id="app">
   <root></root>
 </div>
 {% render_bundle 'main' %}
 {% endblock %}
-
-<!-- This happening jam:
-  <p>TOKEN: {{ opentok_token }}</p>
-  <button onClick="connect()">Connect</button>
-  <button onClick="disconnect()">Disconnect</button>
-  <button onClick="printCapabilities()">Print Capabilities</button>
-  <button onClick="initPublisher()">Init Publisher</button>
-  <button onClick="publish()">Publish</button>
-  <button onClick="subscribeToStream()">Subscribe</button>
-  <button onClick="printJam()">Print Jam</button>
-  <button onClick="printCurrentUser()">Print User</button> -->
