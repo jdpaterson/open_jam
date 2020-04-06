@@ -1,10 +1,15 @@
 <template>
     <div>
-        <p>This is just a demo.</p>
+        <p>Moderator</p>
     </div>
 </template>
 
 <script>
+
+export default {
+
+}
+
 </script>
 
 <style>

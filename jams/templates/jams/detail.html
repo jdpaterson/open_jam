@@ -1,11 +1,20 @@
 {% extends "base_generic.html" %}
 {% load render_bundle from webpack_loader %}
 {% block content %}
+<script>
+  jam = {{ jam|safe }}[0];
+  currentUser = {{ current_user|safe }}[0];
+  opentokSessionId = jam.opentok_session_id;
+  opentokApiKey = "{{ api_key }}";
+  opentokToken = "{{ opentok_token }}";
+</script>
 <div id="app">
-  <demo></demo>
+  <root></root>
 </div>
 {% render_bundle 'main' %}
-  This happening jam:
+{% endblock %}
+
+<!-- This happening jam:
   <p>TOKEN: {{ opentok_token }}</p>
   <button onClick="connect()">Connect</button>
   <button onClick="disconnect()">Disconnect</button>
@@ -14,12 +23,4 @@
   <button onClick="publish()">Publish</button>
   <button onClick="subscribeToStream()">Subscribe</button>
   <button onClick="printJam()">Print Jam</button>
-  <button onClick="printCurrentUser()">Print User</button>
-  <script>
-    jam = {{ jam|safe }}[0];
-    currentUser = {{ current_user|safe }}[0];
-    sessionId = jam.opentok_session_id;
-    apiKey = "{{ api_key }}";
-    token = "{{ opentok_token }}";
-  </script>
-{% endblock %}
+  <button onClick="printCurrentUser()">Print User</button> -->
