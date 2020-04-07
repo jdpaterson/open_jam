@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
-import environ
+from os import environ
 
 root = environ.Path(__file__) - 3
 env = environ.Env()
