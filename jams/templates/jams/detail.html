@@ -1,14 +1,34 @@
-{% extends "base_generic.html" %}
-{% load render_bundle from webpack_loader %}
+{% extends "base_generic.html" %} {% load render_bundle from webpack_loader %}
 {% block content %}
 <script>
   jam = {{ jam|safe }}[0];
   currentUser = {{ current_user|safe }}[0];
   opentokToken = "{{ opentok_token }}";
-  opentokSession = OT.initSession("{{ api_key }}", jam.opentok_session_id);
+  opentokSession = OT.initSession({{ api_key }}, {{jam|safe}}[0].fields.opentok_session_id);
 </script>
 <div id="app">
-  <root></root>
+  <Root>
+    {% if jam_role.name == 'moderator' %}
+    <Moderator
+      slot-scope="modScope"
+      :current-user="modScope.currentUser"
+      :jam-name="modScope.jamName"
+      :opentok-session="modScope.opentokSession"
+      :user-lists="modScope.userLists"
+    />
+    {% elif jam_role.name == 'publisher' %}
+    <Publisher
+      slot-scope="pubScope"
+      :jam-name="pubScope.jamName"
+      :opentok-session="pubScope.opentokSession"
+    />
+    {% else %}
+    <Subscriber
+      slot-scope="subScope"
+      :jam-name="subScope.jamName"
+      :opentok-session="subScope.opentokSession"
+    />
+    {% endif %}
+  </Root>
 </div>
-{% render_bundle 'main' %}
-{% endblock %}
+{% render_bundle 'main' %} {% endblock %}
