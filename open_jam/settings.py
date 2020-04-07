@@ -10,8 +10,9 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
+import dj_database_url
 import os
-from os import environ
+import environ
 
 root = environ.Path(__file__) - 3
 env = environ.Env()
@@ -19,7 +20,7 @@ environ.Env.read_env()
 
 SITE_ROOT = root()
 OPENTOK_API_KEY = env.str('OPENTOK_API_KEY')
-OPENTOK_SECRET  = env.str('OPENTOK_SECRET')
+OPENTOK_SECRET = env.str('OPENTOK_SECRET')
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -139,9 +140,9 @@ LOGIN_REDIRECT_URL = '/jams/'
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
-PROJECT_ROOT    = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-STATIC_ROOT     = os.path.join(PROJECT_ROOT, 'staticfiles')
-STATIC_URL      = '/static/'
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
+STATIC_URL = '/static/'
 
 # Extra lookup directories for collectstatic to find static files
 STATICFILES_DIRS = (
@@ -151,8 +152,7 @@ STATICFILES_DIRS = (
 #  Add configuration for static files storage using wnhitenoise
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-import dj_database_url
-prod_db  =  dj_database_url.config(conn_max_age=500)
+prod_db = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(prod_db)
 
 STATICFILES_DIRS = (
