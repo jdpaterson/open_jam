@@ -2,32 +2,29 @@
   <div id="root">
     <p>Root Jam: {{ jam.fields.name }}</p>
     <slot
-      :jam-name="jam.fields.name"
+      :jam="jam"
       :opentok-session="opentokSession"
       :user-lists="userLists"
       :current-user="currentUser"
     />
-    <!-- <button onClick="initPublisher()">Init Publisher</button>
-    <button onClick="publish()">Publish</button>
-    <button onClick="subscribeToStream()">Subscribe</button>-->
   </div>
 </template>
 
 <script>
-import Moderator from "./Moderator.vue";
+import { Moderator } from "./moderator";
 export default {
   components: {
     Moderator
   },
   data() {
     return {
-      currentUser: {},
+      currentUser: { fields: {} },
       jam: { fields: {} },
       opentokSession: {},
       opentokToken: "",
       userLists: {
         moderators: [],
-        publishers: [],
+        publishers: [{ username: "1" }, { username: "3" }],
         subscribers: []
       }
     };
@@ -41,9 +38,11 @@ export default {
     },
     sessionInit: function() {
       this.opentokSession.on({
-        connectionCreated: function(event) {
-          // TODO: Add the connection to the appropriate list (moderator/publisher/subscriber)
-          console.log("Connection Created");
+        connectionCreated: event => {
+          console.log("Connection Created", JSON.parse(event.connection.data));
+          if (JSON.parse(event.connection.data).role == "publisher") {
+            this.userLists.publishers.push(JSON.parse(event.connection.data));
+          }
         },
         connectionDestroyed: function(event) {
           // TODO: Remove the connection from the appropriate list (moderator/publisher/subscriber)
@@ -70,6 +69,7 @@ export default {
     this.opentokSession = opentokSession;
     this.opentokToken = opentokToken;
     this.sessionInit();
+    this.sessionConnect();
   }
 };
 </script>

@@ -1,12 +1,13 @@
 :root {
-  --seafoam: #B8E5CE;
-  --olive: #7C8A81;
-  --charcoal: #2B363B;
-  --peach: #FCE5AA;
-  --gold: #C7A149;
+  --seafoam: #b8e5ce;
+  --olive: #7c8a81;
+  --charcoal: #2b363b;
+  --peach: #fce5aa;
+  --gold: #c7a149;
 }
 
-body, html {
+body,
+html {
   background-color: var(--charcoal);
   color: var(--seafoam);
   height: 100%;
@@ -48,7 +49,7 @@ form input {
   width: 250px;
 }
 
-form input[type=submit] {
+form input[type="submit"] {
   border: solid 1px var(--olive);
   background-color: var(--peach);
   color: var(--charcoal);
@@ -85,7 +86,7 @@ nav .session-item__button-link {
 
 /* Utility Classes */
 
-.justify--between{
+.justify--between {
   justify-content: space-between;
 }
 
@@ -104,7 +105,7 @@ nav .session-item__button-link {
   width: 360px;
   height: 240px;
   bottom: 10px;
-  left: 10px;
+  left: 250px;
   z-index: 100;
   border: 3px solid white;
   border-radius: 3px;

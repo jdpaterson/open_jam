@@ -12,20 +12,23 @@
     <Moderator
       slot-scope="modScope"
       :current-user="modScope.currentUser"
-      :jam-name="modScope.jamName"
+      :jam="modScope.jam"
       :opentok-session="modScope.opentokSession"
       :user-lists="modScope.userLists"
     />
     {% elif jam_role.name == 'publisher' %}
+    <h1>Publisher</h1>
     <Publisher
       slot-scope="pubScope"
-      :jam-name="pubScope.jamName"
+      :current-user="pubScope.currentUser"
+      :jam="pubScope.jam"
       :opentok-session="pubScope.opentokSession"
     />
     {% else %}
     <Subscriber
       slot-scope="subScope"
-      :jam-name="subScope.jamName"
+      :current-user="modScope.currentUser"
+      :jam="subScope.jam"
       :opentok-session="subScope.opentokSession"
     />
     {% endif %}

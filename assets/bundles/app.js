@@ -86,42 +86,6 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./assets/js/components/Moderator.vue":
-/*!********************************************!*\
-  !*** ./assets/js/components/Moderator.vue ***!
-  \********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Moderator_vue_vue_type_template_id_147e99b4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Moderator.vue?vue&type=template&id=147e99b4& */ \"./assets/js/components/Moderator.vue?vue&type=template&id=147e99b4&\");\n/* harmony import */ var _Moderator_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Moderator.vue?vue&type=script&lang=js& */ \"./assets/js/components/Moderator.vue?vue&type=script&lang=js&\");\n/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ \"./node_modules/vue-loader/lib/runtime/componentNormalizer.js\");\n\n\n\n\n\n/* normalize component */\n\nvar component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(\n  _Moderator_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[\"default\"],\n  _Moderator_vue_vue_type_template_id_147e99b4___WEBPACK_IMPORTED_MODULE_0__[\"render\"],\n  _Moderator_vue_vue_type_template_id_147e99b4___WEBPACK_IMPORTED_MODULE_0__[\"staticRenderFns\"],\n  false,\n  null,\n  null,\n  null\n  \n)\n\n/* hot reload */\nif (false) { var api; }\ncomponent.options.__file = \"assets/js/components/Moderator.vue\"\n/* harmony default export */ __webpack_exports__[\"default\"] = (component.exports);\n\n//# sourceURL=webpack:///./assets/js/components/Moderator.vue?");
-
-/***/ }),
-
-/***/ "./assets/js/components/Moderator.vue?vue&type=script&lang=js&":
-/*!*********************************************************************!*\
-  !*** ./assets/js/components/Moderator.vue?vue&type=script&lang=js& ***!
-  \*********************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _node_modules_babel_loader_lib_index_js_node_modules_vue_loader_lib_index_js_vue_loader_options_Moderator_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib!../../../node_modules/vue-loader/lib??vue-loader-options!./Moderator.vue?vue&type=script&lang=js& */ \"./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js?!./assets/js/components/Moderator.vue?vue&type=script&lang=js&\");\n/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__[\"default\"] = (_node_modules_babel_loader_lib_index_js_node_modules_vue_loader_lib_index_js_vue_loader_options_Moderator_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__[\"default\"]); \n\n//# sourceURL=webpack:///./assets/js/components/Moderator.vue?");
-
-/***/ }),
-
-/***/ "./assets/js/components/Moderator.vue?vue&type=template&id=147e99b4&":
-/*!***************************************************************************!*\
-  !*** ./assets/js/components/Moderator.vue?vue&type=template&id=147e99b4& ***!
-  \***************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Moderator_vue_vue_type_template_id_147e99b4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./Moderator.vue?vue&type=template&id=147e99b4& */ \"./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./assets/js/components/Moderator.vue?vue&type=template&id=147e99b4&\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Moderator_vue_vue_type_template_id_147e99b4___WEBPACK_IMPORTED_MODULE_0__[\"render\"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Moderator_vue_vue_type_template_id_147e99b4___WEBPACK_IMPORTED_MODULE_0__[\"staticRenderFns\"]; });\n\n\n\n//# sourceURL=webpack:///./assets/js/components/Moderator.vue?");
-
-/***/ }),
-
 /***/ "./assets/js/components/Publisher.vue":
 /*!********************************************!*\
   !*** ./assets/js/components/Publisher.vue ***!
@@ -230,6 +194,54 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _nod
 
 /***/ }),
 
+/***/ "./assets/js/components/moderator/Moderator.vue":
+/*!******************************************************!*\
+  !*** ./assets/js/components/moderator/Moderator.vue ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Moderator_vue_vue_type_template_id_20865d6a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Moderator.vue?vue&type=template&id=20865d6a& */ \"./assets/js/components/moderator/Moderator.vue?vue&type=template&id=20865d6a&\");\n/* harmony import */ var _Moderator_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Moderator.vue?vue&type=script&lang=js& */ \"./assets/js/components/moderator/Moderator.vue?vue&type=script&lang=js&\");\n/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ \"./node_modules/vue-loader/lib/runtime/componentNormalizer.js\");\n\n\n\n\n\n/* normalize component */\n\nvar component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(\n  _Moderator_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[\"default\"],\n  _Moderator_vue_vue_type_template_id_20865d6a___WEBPACK_IMPORTED_MODULE_0__[\"render\"],\n  _Moderator_vue_vue_type_template_id_20865d6a___WEBPACK_IMPORTED_MODULE_0__[\"staticRenderFns\"],\n  false,\n  null,\n  null,\n  null\n  \n)\n\n/* hot reload */\nif (false) { var api; }\ncomponent.options.__file = \"assets/js/components/moderator/Moderator.vue\"\n/* harmony default export */ __webpack_exports__[\"default\"] = (component.exports);\n\n//# sourceURL=webpack:///./assets/js/components/moderator/Moderator.vue?");
+
+/***/ }),
+
+/***/ "./assets/js/components/moderator/Moderator.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************!*\
+  !*** ./assets/js/components/moderator/Moderator.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _node_modules_babel_loader_lib_index_js_node_modules_vue_loader_lib_index_js_vue_loader_options_Moderator_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib!../../../../node_modules/vue-loader/lib??vue-loader-options!./Moderator.vue?vue&type=script&lang=js& */ \"./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js?!./assets/js/components/moderator/Moderator.vue?vue&type=script&lang=js&\");\n/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__[\"default\"] = (_node_modules_babel_loader_lib_index_js_node_modules_vue_loader_lib_index_js_vue_loader_options_Moderator_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__[\"default\"]); \n\n//# sourceURL=webpack:///./assets/js/components/moderator/Moderator.vue?");
+
+/***/ }),
+
+/***/ "./assets/js/components/moderator/Moderator.vue?vue&type=template&id=20865d6a&":
+/*!*************************************************************************************!*\
+  !*** ./assets/js/components/moderator/Moderator.vue?vue&type=template&id=20865d6a& ***!
+  \*************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Moderator_vue_vue_type_template_id_20865d6a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./Moderator.vue?vue&type=template&id=20865d6a& */ \"./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./assets/js/components/moderator/Moderator.vue?vue&type=template&id=20865d6a&\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Moderator_vue_vue_type_template_id_20865d6a___WEBPACK_IMPORTED_MODULE_0__[\"render\"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Moderator_vue_vue_type_template_id_20865d6a___WEBPACK_IMPORTED_MODULE_0__[\"staticRenderFns\"]; });\n\n\n\n//# sourceURL=webpack:///./assets/js/components/moderator/Moderator.vue?");
+
+/***/ }),
+
+/***/ "./assets/js/components/moderator/index.js":
+/*!*************************************************!*\
+  !*** ./assets/js/components/moderator/index.js ***!
+  \*************************************************/
+/*! exports provided: Moderator */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Moderator_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Moderator.vue */ \"./assets/js/components/moderator/Moderator.vue\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"Moderator\", function() { return _Moderator_vue__WEBPACK_IMPORTED_MODULE_0__[\"default\"]; });\n\n\n\n\n//# sourceURL=webpack:///./assets/js/components/moderator/index.js?");
+
+/***/ }),
+
 /***/ "./assets/js/index.js":
 /*!****************************!*\
   !*** ./assets/js/index.js ***!
@@ -238,19 +250,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _nod
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ \"./node_modules/vue/dist/vue.js\");\n/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _components_Root_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/Root.vue */ \"./assets/js/components/Root.vue\");\n/* harmony import */ var _components_Moderator_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/Moderator.vue */ \"./assets/js/components/Moderator.vue\");\n/* harmony import */ var _components_Publisher_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/Publisher.vue */ \"./assets/js/components/Publisher.vue\");\n/* harmony import */ var _components_Subscriber_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/Subscriber.vue */ \"./assets/js/components/Subscriber.vue\");\n\n\n\n\n\nwindow.Vue = vue__WEBPACK_IMPORTED_MODULE_0___default.a;\nvar app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({\n  el: '#app',\n  components: {\n    Root: _components_Root_vue__WEBPACK_IMPORTED_MODULE_1__[\"default\"],\n    Moderator: _components_Moderator_vue__WEBPACK_IMPORTED_MODULE_2__[\"default\"],\n    Publisher: _components_Publisher_vue__WEBPACK_IMPORTED_MODULE_3__[\"default\"],\n    Subscriber: _components_Subscriber_vue__WEBPACK_IMPORTED_MODULE_4__[\"default\"]\n  },\n  delimiters: ['[[', ']]']\n});\n\n//# sourceURL=webpack:///./assets/js/index.js?");
-
-/***/ }),
-
-/***/ "./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js?!./assets/js/components/Moderator.vue?vue&type=script&lang=js&":
-/*!*******************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./assets/js/components/Moderator.vue?vue&type=script&lang=js& ***!
-  \*******************************************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n//\n//\n//\n//\n//\n//\n//\n//\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  data: function data() {\n    return {\n      publisher: {}\n    };\n  },\n  methods: {\n    showStart: function showStart() {\n      console.log(this.jamName);\n    },\n    publish: function publish() {\n      this.opentokSession.publish(this.publisher, function (error) {\n        if (error) {\n          console.log(error);\n        } else {\n          console.log(\"Publishing a stream.\");\n        }\n      });\n    },\n    publisherInit: function publisherInit() {\n      return OT.initPublisher(\"publisher\", {\n        name: this.currentUser.fields.username,\n        style: {\n          buttonDisplayMode: \"on\"\n        }\n      }, function (error) {\n        if (error) {// The client cannot publish.\n          // You may want to notify the user.\n        } else {\n          console.log(\"Publisher initialized.\");\n        }\n      });\n    },\n    publisherSet: function publisherSet() {\n      this.opentokSession.publish(this.publisher, function (error) {\n        if (error) {\n          console.log(error);\n        } else {\n          console.log(\"Publishing a stream.\");\n        }\n      });\n    }\n  },\n  mounted: function mounted() {\n    this.publisher = this.publisherInit();\n  },\n  props: [\"jamName\", \"opentokSession\", \"currentUser\"]\n});\n\n//# sourceURL=webpack:///./assets/js/components/Moderator.vue?./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ \"./node_modules/vue/dist/vue.js\");\n/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _components_Root_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/Root.vue */ \"./assets/js/components/Root.vue\");\n/* harmony import */ var _components_moderator_Moderator_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/moderator/Moderator.vue */ \"./assets/js/components/moderator/Moderator.vue\");\n/* harmony import */ var _components_Publisher_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/Publisher.vue */ \"./assets/js/components/Publisher.vue\");\n/* harmony import */ var _components_Subscriber_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/Subscriber.vue */ \"./assets/js/components/Subscriber.vue\");\n\n\n\n\n\nwindow.Vue = vue__WEBPACK_IMPORTED_MODULE_0___default.a;\nvar app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({\n  el: \"#app\",\n  components: {\n    Root: _components_Root_vue__WEBPACK_IMPORTED_MODULE_1__[\"default\"],\n    Moderator: _components_moderator_Moderator_vue__WEBPACK_IMPORTED_MODULE_2__[\"default\"],\n    Publisher: _components_Publisher_vue__WEBPACK_IMPORTED_MODULE_3__[\"default\"],\n    Subscriber: _components_Subscriber_vue__WEBPACK_IMPORTED_MODULE_4__[\"default\"]\n  },\n  delimiters: [\"[[\", \"]]\"]\n});\n\n//# sourceURL=webpack:///./assets/js/index.js?");
 
 /***/ }),
 
@@ -262,7 +262,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n//\n//\n//\n//\n//\n//\n//\n/
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n//\n//\n//\n//\n//\n//\n/* harmony default export */ __webpack_exports__[\"default\"] = ({});\n\n//# sourceURL=webpack:///./assets/js/components/Publisher.vue?./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options");
+eval("__webpack_require__.r(__webpack_exports__);\n//\n//\n//\n//\n//\n//\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  methods: {\n    publisherEnd: function publisherEnd() {\n      this.publisher.destroy();\n    },\n    publisherInit: function publisherInit() {\n      return OT.initPublisher(\"publisher\", {\n        name: this.currentUser.fields.username,\n        style: {\n          buttonDisplayMode: \"on\"\n        }\n      }, function (error) {\n        if (error) {// The client cannot publish.\n          // You may want to notify the user.\n        } else {\n          console.log(\"Publisher initialized.\");\n        }\n      });\n    },\n    publisherStart: function publisherStart() {\n      this.opentokSession.publish(this.publisher, function (error) {\n        if (error) {\n          console.log(error);\n        } else {\n          console.log(\"Publishing a stream.\");\n        }\n      });\n    }\n  },\n  mounted: function mounted() {\n    this.publisher = this.publisherInit();\n  },\n  props: [\"jam\", \"opentokSession\", \"currentUser\"]\n});\n\n//# sourceURL=webpack:///./assets/js/components/Publisher.vue?./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options");
 
 /***/ }),
 
@@ -274,7 +274,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n//\n//\n//\n//\n//\n//\n/* ha
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Moderator_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Moderator.vue */ \"./assets/js/components/Moderator.vue\");\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  components: {\n    Moderator: _Moderator_vue__WEBPACK_IMPORTED_MODULE_0__[\"default\"]\n  },\n  data: function data() {\n    return {\n      currentUser: {},\n      jam: {\n        fields: {}\n      },\n      opentokSession: {},\n      opentokToken: \"\",\n      userLists: {\n        moderators: [],\n        publishers: [],\n        subscribers: []\n      }\n    };\n  },\n  methods: {\n    sessionConnect: function sessionConnect() {\n      this.opentokSession.connect(this.opentokToken);\n    },\n    sessionDisconnect: function sessionDisconnect() {\n      this.opentokSession.disconnect();\n    },\n    sessionInit: function sessionInit() {\n      this.opentokSession.on({\n        connectionCreated: function connectionCreated(event) {\n          // TODO: Add the connection to the appropriate list (moderator/publisher/subscriber)\n          console.log(\"Connection Created\");\n        },\n        connectionDestroyed: function connectionDestroyed(event) {\n          // TODO: Remove the connection from the appropriate list (moderator/publisher/subscriber)\n          console.log(\"Connection Destroyed\");\n        },\n        sessionDisconnected: function sessionDisconnected(event) {\n          if (event.reason === \"networkDisconnected\") {\n            console.log(\"You lost your internet connection.\" + \"Please check your connection and try connecting again.\");\n          }\n        },\n        streamCreated: function streamCreated(event) {\n          console.log(\"New stream in the session: \" + event.stream.streamId); // session.subscribe(event.stream);\n        }\n      });\n    }\n  },\n  mounted: function mounted() {\n    this.currentUser = currentUser;\n    this.jam = jam;\n    this.opentokSession = opentokSession;\n    this.opentokToken = opentokToken;\n    this.sessionInit();\n  }\n});\n\n//# sourceURL=webpack:///./assets/js/components/Root.vue?./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _moderator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./moderator */ \"./assets/js/components/moderator/index.js\");\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  components: {\n    Moderator: _moderator__WEBPACK_IMPORTED_MODULE_0__[\"Moderator\"]\n  },\n  data: function data() {\n    return {\n      currentUser: {\n        fields: {}\n      },\n      jam: {\n        fields: {}\n      },\n      opentokSession: {},\n      opentokToken: \"\",\n      userLists: {\n        moderators: [],\n        publishers: [{\n          username: \"1\"\n        }, {\n          username: \"3\"\n        }],\n        subscribers: []\n      }\n    };\n  },\n  methods: {\n    sessionConnect: function sessionConnect() {\n      this.opentokSession.connect(this.opentokToken);\n    },\n    sessionDisconnect: function sessionDisconnect() {\n      this.opentokSession.disconnect();\n    },\n    sessionInit: function sessionInit() {\n      var _this = this;\n\n      this.opentokSession.on({\n        connectionCreated: function connectionCreated(event) {\n          console.log(\"Connection Created\", JSON.parse(event.connection.data));\n\n          if (JSON.parse(event.connection.data).role == \"publisher\") {\n            _this.userLists.publishers.push(JSON.parse(event.connection.data));\n          }\n        },\n        connectionDestroyed: function connectionDestroyed(event) {\n          // TODO: Remove the connection from the appropriate list (moderator/publisher/subscriber)\n          console.log(\"Connection Destroyed\");\n        },\n        sessionDisconnected: function sessionDisconnected(event) {\n          if (event.reason === \"networkDisconnected\") {\n            console.log(\"You lost your internet connection.\" + \"Please check your connection and try connecting again.\");\n          }\n        },\n        streamCreated: function streamCreated(event) {\n          console.log(\"New stream in the session: \" + event.stream.streamId); // session.subscribe(event.stream);\n        }\n      });\n    }\n  },\n  mounted: function mounted() {\n    this.currentUser = currentUser;\n    this.jam = jam;\n    this.opentokSession = opentokSession;\n    this.opentokToken = opentokToken;\n    this.sessionInit();\n    this.sessionConnect();\n  }\n});\n\n//# sourceURL=webpack:///./assets/js/components/Root.vue?./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options");
 
 /***/ }),
 
@@ -286,7 +286,19 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Mod
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n//\n//\n//\n//\n//\n//\n/* harmony default export */ __webpack_exports__[\"default\"] = ({});\n\n//# sourceURL=webpack:///./assets/js/components/Subscriber.vue?./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options");
+eval("__webpack_require__.r(__webpack_exports__);\n//\n//\n//\n//\n//\n//\n//\n/* harmony default export */ __webpack_exports__[\"default\"] = ({});\n\n//# sourceURL=webpack:///./assets/js/components/Subscriber.vue?./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options");
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js?!./assets/js/components/moderator/Moderator.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./assets/js/components/moderator/Moderator.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  data: function data() {\n    return {\n      publisher: {}\n    };\n  },\n  methods: {\n    publisherEnd: function publisherEnd() {\n      this.publisher.destroy();\n    },\n    publisherInit: function publisherInit() {\n      return OT.initPublisher(\"publisher\", {\n        name: this.currentUser.fields.username,\n        style: {\n          buttonDisplayMode: \"on\"\n        }\n      }, function (error) {\n        if (error) {// The client cannot publish.\n          // You may want to notify the user.\n        } else {\n          console.log(\"Publisher initialized.\");\n        }\n      });\n    },\n    publisherStart: function publisherStart() {\n      this.opentokSession.publish(this.publisher, function (error) {\n        if (error) {\n          console.log(error);\n        } else {\n          console.log(\"Publishing a stream.\");\n        }\n      });\n    }\n  },\n  mounted: function mounted() {\n    this.publisher = this.publisherInit();\n  },\n  props: [\"jam\", \"opentokSession\", \"currentUser\", \"userLists\"]\n});\n\n//# sourceURL=webpack:///./assets/js/components/moderator/Moderator.vue?./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options");
 
 /***/ }),
 
@@ -323,18 +335,6 @@ eval("/* WEBPACK VAR INJECTION */(function(global) {var scope = (typeof global !
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./assets/js/components/Moderator.vue?vue&type=template&id=147e99b4&":
-/*!*********************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./assets/js/components/Moderator.vue?vue&type=template&id=147e99b4& ***!
-  \*********************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return render; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return staticRenderFns; });\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _c(\"div\", [\n    _c(\"h2\", [_vm._v(\"Moderator\")]),\n    _vm._v(\"\\n  \" + _vm._s(_vm.jamName) + \"\\n  \"),\n    _c(\"button\", { on: { click: _vm.showStart } }, [_vm._v(\"Start the Show!\")])\n  ])\n}\nvar staticRenderFns = []\nrender._withStripped = true\n\n\n\n//# sourceURL=webpack:///./assets/js/components/Moderator.vue?./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options");
-
-/***/ }),
-
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./assets/js/components/Publisher.vue?vue&type=template&id=1dfc432b&":
 /*!*********************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./assets/js/components/Publisher.vue?vue&type=template&id=1dfc432b& ***!
@@ -355,7 +355,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return render; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return staticRenderFns; });\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _c(\n    \"div\",\n    { attrs: { id: \"root\" } },\n    [\n      _c(\"p\", [_vm._v(\"Root Jam: \" + _vm._s(_vm.jam.fields.name))]),\n      _vm._v(\" \"),\n      _vm._t(\"default\", null, {\n        jamName: _vm.jam.fields.name,\n        opentokSession: _vm.opentokSession,\n        userLists: _vm.userLists,\n        currentUser: _vm.currentUser\n      })\n    ],\n    2\n  )\n}\nvar staticRenderFns = []\nrender._withStripped = true\n\n\n\n//# sourceURL=webpack:///./assets/js/components/Root.vue?./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return render; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return staticRenderFns; });\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _c(\n    \"div\",\n    { attrs: { id: \"root\" } },\n    [\n      _c(\"p\", [_vm._v(\"Root Jam: \" + _vm._s(_vm.jam.fields.name))]),\n      _vm._v(\" \"),\n      _vm._t(\"default\", null, {\n        jam: _vm.jam,\n        opentokSession: _vm.opentokSession,\n        userLists: _vm.userLists,\n        currentUser: _vm.currentUser\n      })\n    ],\n    2\n  )\n}\nvar staticRenderFns = []\nrender._withStripped = true\n\n\n\n//# sourceURL=webpack:///./assets/js/components/Root.vue?./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options");
 
 /***/ }),
 
@@ -367,7 +367,19 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return render; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return staticRenderFns; });\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _vm._m(0)\n}\nvar staticRenderFns = [\n  function() {\n    var _vm = this\n    var _h = _vm.$createElement\n    var _c = _vm._self._c || _h\n    return _c(\"div\", [_c(\"p\", [_vm._v(\"Subscriber\")])])\n  }\n]\nrender._withStripped = true\n\n\n\n//# sourceURL=webpack:///./assets/js/components/Subscriber.vue?./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return render; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return staticRenderFns; });\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _vm._m(0)\n}\nvar staticRenderFns = [\n  function() {\n    var _vm = this\n    var _h = _vm.$createElement\n    var _c = _vm._self._c || _h\n    return _c(\"div\", [\n      _c(\"p\", [_vm._v(\"Subscriber Video:\")]),\n      _vm._v(\" \"),\n      _c(\"div\", { attrs: { id: \"subscriber\" } })\n    ])\n  }\n]\nrender._withStripped = true\n\n\n\n//# sourceURL=webpack:///./assets/js/components/Subscriber.vue?./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options");
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./assets/js/components/moderator/Moderator.vue?vue&type=template&id=20865d6a&":
+/*!*******************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./assets/js/components/moderator/Moderator.vue?vue&type=template&id=20865d6a& ***!
+  \*******************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return render; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return staticRenderFns; });\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _c(\"div\", [\n    _c(\"h2\", [_vm._v(\"Moderator\")]),\n    _vm._v(\"\\n  \" + _vm._s(_vm.jam.fields.name) + \"\\n  \"),\n    _vm._v(\" \"),\n    _vm._m(0),\n    _vm._v(\" \"),\n    _c(\"h2\", [_vm._v(\"Publisher List\")]),\n    _vm._v(\" \"),\n    _c(\"div\", { attrs: { id: \"publisherList\" } }, [\n      _c(\n        \"ul\",\n        _vm._l(_vm.userLists.publishers, function(publisher, index) {\n          return _c(\"li\", { key: index }, [_vm._v(_vm._s(publisher.username))])\n        }),\n        0\n      )\n    ]),\n    _vm._v(\" \"),\n    _c(\"div\", { attrs: { id: \"subscriberList\" } }),\n    _vm._v(\" \"),\n    _c(\"button\", { on: { click: _vm.publisherStart } }, [\n      _vm._v(\"Start the Show!\")\n    ]),\n    _vm._v(\" \"),\n    _c(\"button\", { on: { click: _vm.publisherEnd } }, [\n      _vm._v(\"Stop the Show!\")\n    ])\n  ])\n}\nvar staticRenderFns = [\n  function() {\n    var _vm = this\n    var _h = _vm.$createElement\n    var _c = _vm._self._c || _h\n    return _c(\"div\", { attrs: { id: \"publisher\" } }, [\n      _c(\"h2\", [_vm._v(\"Publisher Div\")])\n    ])\n  }\n]\nrender._withStripped = true\n\n\n\n//# sourceURL=webpack:///./assets/js/components/moderator/Moderator.vue?./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options");
 
 /***/ }),
 

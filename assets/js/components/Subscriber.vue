@@ -1,15 +1,12 @@
 <template>
-    <div>
-        <p>Subscriber</p>
-    </div>
+  <div>
+    <p>Subscriber Video:</p>
+    <div id="subscriber"></div>
+  </div>
 </template>
 
 <script>
-
-export default {
-
-}
-
+export default {};
 </script>
 
 <style>
