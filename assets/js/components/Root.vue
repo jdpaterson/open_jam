@@ -1,11 +1,10 @@
 <template>
   <div id="root">
-    <p>Root Jam: {{ jam.fields.name }}</p>
     <slot
-      :jam="jam"
-      :opentok-session="opentokSession"
-      :user-lists="userLists"
-      :current-user="currentUser"
+      :jam="dJam"
+      :opentok-session="dOpentokSession"
+      :user-lists="dUserLists"
+      :current-user="dCurrentUser"
     />
   </div>
 </template>
@@ -13,35 +12,41 @@
 <script>
 import { Moderator } from "./moderator";
 export default {
+  created() {
+    this.dOpentokSession = OT.initSession(
+      this.apiKey,
+      this.dJam.fields.opentok_session_id
+    );
+    this.sessionConnect();
+  },
   components: {
-    Moderator
+    Moderator,
   },
   data() {
     return {
-      currentUser: { fields: {} },
-      jam: { fields: {} },
-      opentokSession: {},
-      opentokToken: "",
-      userLists: {
+      dCurrentUser: JSON.parse(this.currentUser)[0],
+      dJam: JSON.parse(this.jam)[0],
+      dOpentokSession: {},
+      dUserLists: {
         moderators: [],
-        publishers: [{ username: "1" }, { username: "3" }],
-        subscribers: []
-      }
+        publishers: [],
+        subscribers: [],
+      },
     };
   },
   methods: {
     sessionConnect: function() {
-      this.opentokSession.connect(this.opentokToken);
+      this.dOpentokSession.connect(this.opentokToken);
     },
     sessionDisconnect: function() {
-      this.opentokSession.disconnect();
+      this.dOpentokSession.disconnect();
     },
     sessionInit: function() {
-      this.opentokSession.on({
-        connectionCreated: event => {
+      this.dOpentokSession.on({
+        connectionCreated: (event) => {
           console.log("Connection Created", JSON.parse(event.connection.data));
           if (JSON.parse(event.connection.data).role == "publisher") {
-            this.userLists.publishers.push(JSON.parse(event.connection.data));
+            this.dUserLists.publishers.push(event.connection);
           }
         },
         connectionDestroyed: function(event) {
@@ -56,23 +61,20 @@ export default {
             );
           }
         },
-        streamCreated: function(event) {
-          console.log("New stream in the session: " + event.stream.streamId);
-          // session.subscribe(event.stream);
-        }
+        streamCreated: (event) => {
+          console.log("New stream in the session: ", event);
+          const connectionData = JSON.parse(event.stream.connection.data);
+          console.log("NAME: ", connectionData.name);
+          this.dOpentokSession.subscribe(event.stream, "main-event");
+        },
       });
-    }
+    },
   },
   mounted() {
-    this.currentUser = currentUser;
-    this.jam = jam;
-    this.opentokSession = opentokSession;
-    this.opentokToken = opentokToken;
     this.sessionInit();
-    this.sessionConnect();
-  }
+  },
+  props: ["api-key", "currentUser", "jam", "opentokToken"],
 };
 </script>
 
-<style>
-</style>
+<style></style>

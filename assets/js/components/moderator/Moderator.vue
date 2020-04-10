@@ -1,15 +1,20 @@
 <template>
   <div>
     <h2>Moderator</h2>
-    {{ jam.fields.name }}
-    <!-- <h3>The Publisher Thing</h3> -->
-    <div id="publisher">
+    <h3>The Publisher Thing</h3>
+    <div id="main-event">
       <h2>Publisher Div</h2>
     </div>
     <h2>Publisher List</h2>
     <div id="publisherList">
       <ul>
-        <li v-for="(publisher, index) in userLists.publishers" :key="index">{{ publisher.username }}</li>
+        <li v-for="(publisher, index) in userLists.publishers" :key="index">
+          <!-- {{ publisher.data }} -->
+          A Publisher
+          <button v-on:click="signalPublisherStart(publisher)">
+            Start as publisher
+          </button>
+        </li>
       </ul>
     </div>
     <div id="subscriberList">
@@ -22,9 +27,12 @@
 
 <script>
 export default {
+  created() {
+    this.dModerator = this.publisherInit();
+  },
   data: function() {
     return {
-      publisher: {}
+      dModerator: {},
     };
   },
   methods: {
@@ -36,9 +44,11 @@ export default {
         "publisher",
         {
           name: this.currentUser.fields.username,
+          showControls: true,
           style: {
-            buttonDisplayMode: "on"
-          }
+            buttonDisplayMode: "on",
+            nameDisplayMode: "on",
+          },
         },
         function(error) {
           if (error) {
@@ -58,14 +68,26 @@ export default {
           console.log("Publishing a stream.");
         }
       });
-    }
+    },
+    signalPublisherStart: function(pubConnection) {
+      this.opentokSession.signal(
+        {
+          to: pubConnection,
+          data: JSON.parse(pubConnection.data).username,
+          type: "PUBSTART",
+        },
+        function(error) {
+          if (error) {
+            console.log("signal error (" + error.name + "): " + error.message);
+          } else {
+            console.log("signal sent.");
+          }
+        }
+      );
+    },
   },
-  mounted() {
-    this.publisher = this.publisherInit();
-  },
-  props: ["jam", "opentokSession", "currentUser", "userLists"]
+  props: ["jam", "opentokSession", "currentUser", "userLists"],
 };
 </script>
 
-<style>
-</style>
+<style></style>

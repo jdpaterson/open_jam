@@ -6,7 +6,27 @@
 
 <script>
 export default {
+  created() {},
+  data: function() {
+    return {
+      dPublisher: this.publisherInit(),
+    };
+  },
   methods: {
+    initPublisherSession: function() {
+      this.opentokSession.on({
+        signal: (event) => {
+          console.log("Signal Event: ", event);
+          const { data, type } = event;
+          if (
+            type == "signal:PUBSTART" &&
+            data == this.currentUser.fields.username
+          ) {
+            this.publisherStart();
+          }
+        },
+      });
+    },
     publisherEnd: function() {
       this.publisher.destroy();
     },
@@ -15,9 +35,6 @@ export default {
         "publisher",
         {
           name: this.currentUser.fields.username,
-          style: {
-            buttonDisplayMode: "on"
-          }
         },
         function(error) {
           if (error) {
@@ -30,21 +47,23 @@ export default {
       );
     },
     publisherStart: function() {
-      this.opentokSession.publish(this.publisher, function(error) {
+      this.opentokSession.publish(this.dPublisher, function(error) {
         if (error) {
           console.log(error);
         } else {
           console.log("Publishing a stream.");
         }
       });
-    }
+    },
   },
   mounted() {
-    this.publisher = this.publisherInit();
+    this.initPublisherSession();
+    // console.log("PUB:", this.currentUser);
+    // this.initPublisherSession(this.openTokSession);
+    // this.publisher = this.publisherInit();
   },
-  props: ["jam", "opentokSession", "currentUser"]
+  props: ["jam", "opentokSession", "currentUser"],
 };
 </script>
 
-<style>
-</style>
+<style></style>
